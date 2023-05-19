@@ -3,7 +3,7 @@ agent any
   stages{
     stage("build"){
       steps{
-      echo 'this is building stage'
+      echo 'this is building stagedfgffg'
       }
     }
     stage("test"){

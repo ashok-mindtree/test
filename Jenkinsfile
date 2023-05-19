@@ -1,9 +1,13 @@
 pipeline{
 agent any
+  environment{
+    cred=credentials('userpass')
+  }
   stages{
     stage("build"){
       steps{
       echo 'this is building stagedfgffg'
+        echo "credentials are ${cred}"
       }
     }
     stage("test"){

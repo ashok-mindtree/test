@@ -26,7 +26,7 @@ agent any
   }
   post{
       failure{
-        mail to: 'kolluri.ashok@mindtree.com', subject: 'Pipe line Failed'
+        mail to: 'kolluri.ashok@mindtree.com', subject: 'Pipe line Failed',body: 'build failed'
       }
     }
 

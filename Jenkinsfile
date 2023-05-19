@@ -7,8 +7,8 @@ agent any
     stage("build"){
       steps{
       echo 'this is building stagedfgffg'
-        echo "credentials are ${credin_USR}"
-        echo "credentials are ${credin_PSW}"
+        echo "username is ${credin_USR}"
+        echo "password is ${credin_PSW}"
       }
     }
     stage("test"){
@@ -19,6 +19,11 @@ agent any
     stage("deploy"){
       steps{
       echo 'this is deploy stage'
+      }
+    }
+    post{
+      fialure{
+        mail to: kolluri.ashok@mindtree.com, subject: 'Pipe line Failed'
       }
     }
   

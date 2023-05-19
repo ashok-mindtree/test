@@ -23,7 +23,7 @@ agent any
     }
     post{
       fialure{
-        mail to: kolluri.ashok@mindtree.com, subject: 'Pipe line Failed'
+        mail to: 'kolluri.ashok@mindtree.com', subject: 'Pipe line Failed'
       }
     }
   

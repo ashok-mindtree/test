@@ -21,13 +21,14 @@ agent any
       echo 'this is deploy stage'
       }
     }
-    post{
+    
+  
+  }
+  post{
       fialure{
         mail to: 'kolluri.ashok@mindtree.com', subject: 'Pipe line Failed'
       }
     }
-  
-  }
 
 
 }

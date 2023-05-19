@@ -7,7 +7,7 @@ agent any
     stage("build"){
       steps{
       echo 'this is building stagedfgffg'
-        echo "credentials are ${credin}"
+        echo "credentials are ${credin_USR}"
         echo "credentials are ${credin_PSW}"
       }
     }

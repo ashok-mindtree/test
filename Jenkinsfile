@@ -1,17 +1,22 @@
-pipeline {
-  agent any
-  stages {
-    stage('code checkout') {
-      steps {
-        git(url: 'https://github.com/ashok-mindtree/test.git', branch: 'main')
+pipeline{
+agent any
+  stages{
+    stage('build'){
+      steps{
+      echo 'this is building stage'
       }
     }
-
-    stage('Log') {
-      steps {
-        sh 'ls -a'
+    stage('test'){
+      steps{
+      echo 'this is testing stage'
+      }
+    }stage('deploy'){
+      steps{
+      echo 'this is deploy stage'
       }
     }
-
+  
   }
+
+
 }

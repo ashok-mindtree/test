@@ -14,7 +14,7 @@ agent any
     stage("test"){
       steps{
       echo 'this is testing stage-2'
-        withCredentials([usernamePassword(credentials:'userpass',usernamevariable:USER,passwordVariable:PASS)]){
+        withCredentials([usernamePassword(credentials:'userpass',usernameVariable:USER,passwordVariable:PASS)]){
           echo "username in stage-2 is ${USER}"
           echo "username in stage-2 is ${PASS}"
         }

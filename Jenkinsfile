@@ -7,13 +7,18 @@ agent any
     stage("build"){
       steps{
       echo 'this is building stagedfgffg'
-        echo "username is ${cedin_USR}"
-        echo "password is ${credin_PSW}"
+        echo "username in stage-1 is ${cedin_USR}"
+        echo "password in stage-1 is ${credin_PSW}"
       }
     }
     stage("test"){
       steps{
-      echo 'this is testing stage'
+      echo 'this is testing stage-2'
+        withCredentials([usernamePassword(credentials:'userpass',usernamevariable:USER,passwordVariable:PASS)]){
+          echo "username in stage-2 is ${USER}"
+          echo "username in stage-2 is ${PASS}"
+        }
+       
       }
     }
     stage("deploy"){
